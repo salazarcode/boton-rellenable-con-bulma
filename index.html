@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    <div class="container is-widescreen" style="margin-top:45px">
+        <div class="title">Ejemplo de botón que se rellena:</div>
+        <a class="button is-success is-outlined animated">
+            Er Vebo
+        </a>        
+    </div>
+
+
+    <style>
+        .button.animated{
+            transition: ease-in-out .6s;
+        }
+
+        .button.animated:before{
+            content: "";
+            display: block;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            height: 0;
+            background: #32a852 ;
+            z-index: -1;
+            border-radius: 3px;
+            transition: ease-in-out .6s;
+            transform-origin: bottom; 
+        }
+
+        .button.animated:hover{
+            background-color: transparent !important;
+        }
+
+        .button.animated:hover::before{
+            height:100%
+        }
+    </style>
+</body>
+</html>
